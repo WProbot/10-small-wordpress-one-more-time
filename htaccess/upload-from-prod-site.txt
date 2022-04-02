@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_URI} ^/(wp-content/uploads/20[0-9][0-9]/.*)$
+  RewriteRule ^(.*) https://prod-domain.tld/%1 [L,R=302]
+</IfModule>
